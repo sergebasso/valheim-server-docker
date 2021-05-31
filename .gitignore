@@ -1,0 +1,17 @@
+config/backups/
+config/valheimplus/
+config/worlds/*
+!config/worlds/.gitkeep
+config/adminlist.txt
+config/bannedlist.txt
+config/bannedlist.txt
+config/permittedlist.txt
+config/httpd.conf
+config/prefs
+
+data/dl/
+data/htdocs/status.json
+data/plus/
+data/server/
+
+.env

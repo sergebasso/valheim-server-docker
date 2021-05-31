@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  valheim:
+    image: lloesche/valheim-server
+    cap_add:
+    - sys_nice
+    volumes:
+    - ./config:/config
+    - ./data:/opt/valheim
+    - $HOST_BACKUPS_DIRECTORY:/valheim-backups
+    ports:
+    - "2456-2457:2456-2457/udp"
+    - "$HOST_SUPERVISOR_HTTP_PORT:9001/tcp"
+    - "$HOST_STATUS_HTTP_PORT:80/tcp"
+    environment:
+    - SERVER_PUBLIC=true
+    - SUPERVISOR_HTTP=true
+    - STATUS_HTTP=true
+    - BACKUPS_DIRECTORY=/valheim-backups
+    env_file:
+    - ./.env
+    restart: always
+    stop_grace_period: 2m
