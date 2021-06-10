@@ -1,4 +1,5 @@
-config/backups/
+backups/
+
 config/valheimplus/
 config/worlds/*
 !config/worlds/.gitkeep

@@ -2,24 +2,31 @@
 
 ## Usage
 
+Start the server:
+
 1. Install Docker Desktop
-2. Open PowerShell
-3. Copy ``.env.template`` to ``.env`` and configure
-4. Bring up the stack with ``docker-compose up``
+2. Get a copy of this
+3. Copy `.env.template` to `.env` and configure
+4. Run the script `scripts/StartServer.ps1`
+5. Open the server ports `2456` and `2457`
+
+Stop the server:
+
+1. Run the script `scripts/StopServer.ps1`
 
 ## Status pages
 
-- Valheim: http://127.0.0.1/
+- Valheim: http://127.0.0.1:8080/
 - Supervisor: http://127.0.0.1:9001/
 
 ## Worlds
 
-Worlds are saved to ``./config/worlds/``.
+Worlds are saved to `./config/worlds/`.
 
 ## Backups
 
-Destination configured using the ``HOST_BACKUPS_DIRECTORY`` variable in ``.env``.
+Set the backup destination using the `HOST_BACKUPS_DIRECTORY` variable in `.env`. It defaults to `./backups/`.
 
 ## Valheim Plus
 
-Enabled using the ``VALHEIM_PLUS`` variable in ``.env``. Configuration is saved to ``./config/valheimplus/valheim_plus.cfg``.
+Enable Valheim Plus by setting the `VALHEIM_PLUS` variable in `.env` to `true`. The Valheim Plus configuration is saved to `./config/valheimplus/valheim_plus.cfg`.
