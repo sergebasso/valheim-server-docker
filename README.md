@@ -1,5 +1,7 @@
 # Valheim Server
 
+This project provides a Docker Compose file for launching the image [`lloesche/valheim-server`](https://hub.docker.com/r/lloesche/valheim-server).
+
 ## Usage
 
 Start the server:
@@ -7,12 +9,12 @@ Start the server:
 1. Install Docker Desktop
 2. Get a copy of this
 3. Copy `.env.template` to `.env` and configure
-4. Run the script `scripts/StartServer.ps1`
+4. Run the script `scripts/StartServer.bat`
 5. Open the server ports `2456` and `2457`
 
 Stop the server:
 
-1. Run the script `scripts/StopServer.ps1`
+1. Run the script `scripts/StopServer.bat`
 
 ## Status pages
 
